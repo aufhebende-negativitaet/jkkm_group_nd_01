@@ -10,7 +10,7 @@ var ptsNeededCS = 0;
 var ptsNeededSS = 0;
 
 function getRandomValue(min, max){
-    return Math.round((Math.random() * max) + min);
+    return Math.floor((Math.random() * max) + min);
 };
 function assignCompanyName(){
     $('#companyName').text(companyNames[getRandomValue(0, companyNames.length-1)]);
