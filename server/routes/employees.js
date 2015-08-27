@@ -9,7 +9,7 @@ var router = express.Router();
 
 router.get('/', function(req, res, next){
     console.log('Someone accessed the employees page');
-    res.send(newEmployee.createEmployee() + "\n");
+    res.send(newEmployee.createEmployee());
 });
 module.exports = router;
 

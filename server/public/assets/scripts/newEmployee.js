@@ -14,8 +14,8 @@ var newEmployee = {
 
         };
 
-        var employeeToSend = employee.name + " " + employee.skillset + " " + employee.points;
-        return employeeToSend;
+        // var employeeToSend = employee.name + " " + employee.skillset + " " + employee.points;
+        return employee;
     }
 
 };
