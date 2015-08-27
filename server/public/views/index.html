@@ -10,20 +10,21 @@
 </head>
 
 <body>
+<body>
 <div class="hero-unit">
     <h1>Random Project Generator</h1>
     <p>Create your project here</p>
     <p>
         <a class="btn btn-primary btn-large" id="generate">Generate Project</a>
     </p>
-    <button class="btn hidden btn-primary btn-large" id="staff">Assign Staff</button>
-    <button class="btn hidden btn-primary btn-large" id="staff">Add Extra Employee</button>
+    <div id="buttons">
+        <button class="btn hidden btn-primary btn-large" id="staff">Assign Staff</button>
+        <button class="btn hidden btn-primary btn-large" id="extra">Add Extra Employee</button>
+    </div>
 </div>
 
-
-<!-- Content -->
 <div class = "content">
-
+    <!-- Project Description -->
     <div class="well well-large">
         <h1 id="companyName"></h1>
         <h2 id="frontEnd"></h2>
@@ -31,14 +32,24 @@
         <h2 id="serverSide"></h2>
     </div>
 
-</div>
-<div class="well well-large" id="randomEmployee">
-    <h1 id="eeName"></h1>
-    <h2 id="eeSkill"></h2>
-    <h2 id="eePoints"></h2>
+    <!-- Assign staff -->
 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="./scripts/scripts.js"></script>
+    <div class="well well-large" id="randomEmployee">
+        <!--     <h1 id="eeName"></h1>
+            <h2 id="eeSkill"></h2>
+                <h2 id="eePoints"></h2> -->
+        <h2 id="sprint"></h2>
+    </div>
+    <!-- Extra staffperson -->
+    <div class="well well-large" id="extraEmployee">
+        <p id="extraName"></p>
+        <p id="extraSkill"></p>
+        <p id="extraPoints"></p>
+        <h2 id="reSprint"> </h2>
+    </div>
+</div>
+<script src="jquery.min.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>

@@ -10,17 +10,19 @@ body {
 h1 {
     color: navy;
 }
+h2 {
+    font-size: 18px;
+    color: navy;
+}
 .well {
     margin: 25px 0 0 0;
 }
 p {
-    font-size: 140%;
+    font-size: 14px;
 }
-
 .btn {
     margin: 20px auto;
-
 }
-.hidden{
+.hidden {
     display: none;
 }
