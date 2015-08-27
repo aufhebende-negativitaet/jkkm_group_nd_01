@@ -39,6 +39,18 @@ $(document).ready(function(){
         console.log("Click event for employees fired");
         getEmployee();
     });
+
+    $('#extra').on('click', function(){
+        $.get( "https://ancient-plateau-8570.herokuapp.com/employees", function( data ) {
+
+            $('#extraName').text(data.name);
+            $('#extraSkill').text(data.skillset);
+            $('#extraPoints').text(data.points);
+            var $reSprint = $('#reSprint');
+            $reSprint.text("This project will STILL be completed in ONE sprint!");
+
+        });
+    });
 });
 function getEmployee(){
     $.get( "https://ancient-plateau-8570.herokuapp.com/employees", function(data){
@@ -104,21 +116,12 @@ function whichBucket(data){
         // $('#randomEmployee').append($h1);
         //    break;
     }
-    $('#extra').on('click', function(){
-        $.get( "https://ancient-plateau-8570.herokuapp.com/employees", function( data ) {
 
-            $('#extraName').text(data.name);
-            $('#extraSkill').text(data.skillset);
-            $('#extraPoints').text(data.points);
-            var $reSprint = $('#reSprint');
-            $reSprint.text("This project will STILL be completed in ONE sprint!");
+}
 
-        });
-    });
-    function printEE(){
-        var $div = $('<div>');
-        $div.attr('class', data.skillset);
-        $div.text(data.name+": " +data.skillset+", "+data.points+" scrum points");
-        $('#randomEmployee').append($div);
-    }
+function printEE(){
+    var $div = $('<div>');
+    $div.attr('class', data.skillset);
+    $div.text(data.name+": " +data.skillset+", "+data.points+" scrum points");
+    $('#randomEmployee').append($div);
 }
