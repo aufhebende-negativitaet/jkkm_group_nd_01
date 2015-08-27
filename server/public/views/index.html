@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Random Project Software Co.</title>
+    <meta name="description" content="Webpage">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./styles/styles.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="hero-unit">
+    <h1>Random Project Generator</h1>
+    <p>Create your project here</p>
+    <p>
+        <a class="btn btn-primary btn-large" id="generate">Generate Project</a>
+    </p>
+    <button class="btn hidden btn-primary btn-large" id="staff">Assign Staff</button>
+    <button class="btn hidden btn-primary btn-large" id="staff">Add Extra Employee</button>
+</div>
+
+
+<!-- Content -->
+<div class = "content">
+
+    <div class="well well-large">
+        <h1 id="companyName"></h1>
+        <h2 id="frontEnd"></h2>
+        <h2 id="clientSide"></h2>
+        <h2 id="serverSide"></h2>
+    </div>
+
+</div>
+<div class="well well-large" id="randomEmployee">
+    <h1 id="eeName"></h1>
+    <h2 id="eeSkill"></h2>
+    <h2 id="eePoints"></h2>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="./scripts/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+body {
+    width: 600px;
+    margin: 30px auto;
+}
+.hero-unit {
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 30px;
+}
+h1 {
+    color: navy;
+}
+.well {
+    margin: 25px 0 0 0;
+}
+p {
+    font-size: 140%;
+}
+
+.btn {
+    margin: 20px auto;
+
+}
+.hidden{
+    display: none;
+}
