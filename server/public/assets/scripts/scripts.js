@@ -10,7 +10,7 @@ var ptsNeededCS = 0;
 var ptsNeededSS = 0;
 
 function getRandomValue(min, max){
-    return Math.floor((Math.random() * max) + min);
+        return Math.floor((Math.random() * (max - min + 1)) + min);
 };
 function assignCompanyName(){
     $('#companyName').text(companyNames[getRandomValue(0, companyNames.length-1)]);
@@ -82,7 +82,7 @@ function whichBucket(data){
         case "Front End":
             if (currentPtsFE<ptsNeededFE) {
                 feEmployees.push(data);
-                currentPtsFE+=totalPoints(feEmployees);
+                currentPtsFE=totalPoints(feEmployees);
                 printEE();
                 break; }
             else {
@@ -92,7 +92,7 @@ function whichBucket(data){
         case "Client Side":
             if (currentPtsCS<ptsNeededCS) {
                 csEmployees.push(data);
-                currentPtsCS+=totalPoints(csEmployees);
+                currentPtsCS=totalPoints(csEmployees);
                 printEE();
                 break;}
             else {
@@ -102,7 +102,7 @@ function whichBucket(data){
         case "Server Side":
             if (currentPtsSS<ptsNeededSS) {
                 ssEmployees.push(data);
-                currentPtsSS+=totalPoints(ssEmployees);
+                currentPtsSS=totalPoints(ssEmployees);
                 printEE();
                 break;
             } else {
@@ -122,7 +122,18 @@ function whichBucket(data){
         var $div = $('<div>');
         $div.attr('class', data.skillset);
         $div.text(data.name+": " +data.skillset+", "+data.points+" scrum points");
-        $('#randomEmployee').append($div);
+
+        if(data.skillset == "Front End"){
+            $('#FE').append($div);
+        }else if(data.skillset == "Client Side"){
+            $('#CS').append($div);
+        }else if(data.skillset == "Server Side"){
+            $('#SS').append($div);
+        }
+
+        $("#currentFE").text("Current Front End Points: " + currentPtsFE);
+        $("#currentCS").text("Current Client Side Points: " + currentPtsCS);
+        $("#currentSS").text("Current Server Side Points: " + currentPtsSS);
     }
 }
 
