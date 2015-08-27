@@ -48,10 +48,10 @@ $(document).ready(function(){
             $('#extraPoints').text(data.points);
             var $reSprint = $('#reSprint');
             $reSprint.text("This project will STILL be completed in ONE sprint!");
-
         });
     });
 });
+
 function getEmployee(){
     $.get( "https://ancient-plateau-8570.herokuapp.com/employees", function(data){
         //console.log("Get ee before whichBucket:", data);
@@ -75,6 +75,7 @@ function totalPoints(array){
     }
     return somePoints;
 }
+
 function whichBucket(data){
     //console.log("in which bucket", data);
     switch (data.skillset){
@@ -117,11 +118,11 @@ function whichBucket(data){
         //    break;
     }
 
+    function printEE(){
+        var $div = $('<div>');
+        $div.attr('class', data.skillset);
+        $div.text(data.name+": " +data.skillset+", "+data.points+" scrum points");
+        $('#randomEmployee').append($div);
+    }
 }
 
-function printEE(){
-    var $div = $('<div>');
-    $div.attr('class', data.skillset);
-    $div.text(data.name+": " +data.skillset+", "+data.points+" scrum points");
-    $('#randomEmployee').append($div);
-}
