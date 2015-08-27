@@ -8,6 +8,7 @@ var currentPtsSS = 0;
 var ptsNeededFE = 0;
 var ptsNeededCS = 0;
 var ptsNeededSS = 0;
+
 function getRandomValue(min, max){
     return Math.round((Math.random() * max) + min);
 };
