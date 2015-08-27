@@ -119,6 +119,10 @@ function whichBucket(data){
     }
 
     function printEE(){
+        var $sprinta = $('#sprinta');
+        var $sprintb = $('#sprintb');
+        var $sprintc = $('#sprintc');
+
         var $div = $('<div>');
         $div.attr('class', data.skillset);
         $div.text(data.name+": " +data.skillset+", "+data.points+" scrum points");
@@ -130,6 +134,10 @@ function whichBucket(data){
         }else if(data.skillset == "Server Side"){
             $('#SS').append($div);
         }
+
+        $sprinta.append('<p>').text("Front End Sprints: "+(Math.ceil(ptsNeededFE/currentPtsFE)));
+        $sprintb.append('<p>').text("Client Side Sprints: "+(Math.ceil(ptsNeededCS/currentPtsCS)));
+        $sprintc.append('<p>').text("Server Side Sprints: "+(Math.ceil(ptsNeededSS/currentPtsSS)));
 
         $("#currentFE").text("Current Front End Points: " + currentPtsFE);
         $("#currentCS").text("Current Client Side Points: " + currentPtsCS);
